@@ -16,5 +16,13 @@ pipeline {
                 }
             }
         }
+        stage('Upload Object to S3') {
+            steps {
+                script {
+                    sh "aws s3 cp $LOCAL_FILE_PATH s3://$BUCKET_NAME/$OBJECT_KEY"
+                }
+            }
+        }
     }
+    
 }
