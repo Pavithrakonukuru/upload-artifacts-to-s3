@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION = 'your-region'
         BUCKET_NAME = 'depali'
-        FILE_PATH = 'C:\Users\91956\Desktop\kp-jenkins\upload s3 artifacts\s3_bucket.yaml'
+        FILE_PATH = "C:\\Users\\91956\\Desktop\\kp-jenkins\\upload s3 artifacts\\s3_bucket.yaml"
     }
 
     stages {
