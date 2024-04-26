@@ -7,7 +7,7 @@ Parameters:
     Type: String
     Description: Key for the object in the S3 bucket
 
-  LocalFilePath:
+  LOCAL_FILE_PATH:
     Type: String
     Description: Local path of the file to be uploaded to the S3 bucket
 
@@ -22,4 +22,4 @@ Resources:
     Properties:
       Bucket: !Ref MyS3Bucket
       Key: !Ref ObjectKey
-      Source: !Ref LocalFilePath
+      Source: !Ref LOCAL_FILE_PATH
