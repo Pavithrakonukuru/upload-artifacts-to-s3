@@ -4,7 +4,7 @@ pipeline {
         AWS_DEFAULT_REGION = 'us-west-2'
         BUCKET_NAME = 'sashi'
         OBJECT_KEY = 's3_yaml'
-        LOCAL_FILE_PATH = 'C:\Users\91956\Desktop\demo\s3_bucket.yaml'
+        LOCAL_FILE_PATH = 'C:\\Users\\91956\\Desktop\\demo\\s3_bucket.yaml'
     }
     stages {
         stage('Deploy CloudFormation Stack') {
