@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'Nani', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     script {
-                        sh "aws cloudformation deploy --template-file s3_bucket.yml --stack-name my-s3-stack --parameter-overrides BucketName=${BUCKET_NAME} ObjectKey=${OBJECT_KEY} LocalFilePath=${LOCAL_FILE_PATH} --capabilities CAPABILITY_IAM"
+                        sh "aws cloudformation deploy --template-file s3_bucket.yaml --stack-name my-s3-stack --parameter-overrides BucketName=${BUCKET_NAME} ObjectKey=${OBJECT_KEY} LocalFilePath=${LOCAL_FILE_PATH} --capabilities CAPABILITY_IAM"
                     }
                 }
             }
