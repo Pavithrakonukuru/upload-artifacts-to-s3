@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        AWS_DEFAULT_REGION = 'your-aws-region'
-        BUCKET_NAME = 'my-example-bucket'
-        OBJECT_KEY = 'example.txt'
-        LOCAL_FILE_PATH = 'path/to/local/file.txt'
+        AWS_DEFAULT_REGION = 'us-west-2'
+        BUCKET_NAME = 'sashi'
+        OBJECT_KEY = 's3_yaml'
+        LOCAL_FILE_PATH = 'C:\Users\91956\Desktop\demo\s3_bucket.yaml'
     }
     stages {
         stage('Deploy CloudFormation Stack') {
