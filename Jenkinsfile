@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy CloudFormation Stack') {
             steps {
                 script {
-                    sh "aws cloudformation deploy --stack-name MyS3BucketStack --template-file s3_bucket_template.yaml --parameter-overrides BucketName=${BUCKET_NAME} --capabilities CAPABILITY_IAM"
+                    sh "aws cloudformation deploy --stack-name MyS3BucketStack --template-file s3_bucket.yaml --parameter-overrides BucketName=${BUCKET_NAME} --capabilities CAPABILITY_IAM"
                 }
             }
         }
